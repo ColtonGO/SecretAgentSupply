@@ -74,6 +74,10 @@ a {
   background-color: firebrick;
 }
 
+.nav-button {
+  display: none;
+}
+
 /* when applying styles to a list, make sure you are targeting the list and not the containing div */
 
 .nav ul {
@@ -162,4 +166,111 @@ a {
 
 .footer .container {
   align-items: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1024px) {
+
+  .nav ul {
+    display: none;
+  }
+
+  .nav-button {
+    display: block;
+    margin: 0.75rem auto;
+  }
+
+  .main .container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 21rem;
+  }
+
+  .featured-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 47%;
+    border: 4px solid black;
+    margin: 3rem 0;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15rem;
+    background-image: url("../images/moto.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero .container {
+    align-items: flex-start;
+    margin-top: 10rem;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 0.77rem;
+    font-weight: bold;
+    background-color: black;
+  }
+
+  .hero-content h1 {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .main .container {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 470px;
+  }
+
+  .featured-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    border: 4px solid black;
+    margin: 3rem 0;
+  }
+
+  /* Store Info Section */
+
+  .store-info {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
+  .info-title {
+    padding: 0.5rem 2rem;
+    background-color: black;
+  }
+
+  .store-info span {
+    color: black;
+  }
+
+  .location .container {
+    margin-bottom: 4rem;
+  }
+
+  /* Footer Section */
+
+  .footer .container {
+    justify-content: center;
+  }
+
 }
